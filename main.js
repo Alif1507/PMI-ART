@@ -187,10 +187,17 @@ document.addEventListener('DOMContentLoaded', () => {
   bangkitkanBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       const eventName = btn.getAttribute('data-event') || 'Tantangan';
+      const targetUrl = btn.getAttribute('data-url') || '#';
+      
       if (modalTitle && modalDesc) {
         modalTitle.textContent = `Tantangan "${eventName}" Dibangkitkan!`;
-        modalDesc.textContent = `Persiapkan karya terbaikmu untuk tantangan "${eventName}". Kirimkan sebelum 31 Agustus 2026.`;
+        modalDesc.textContent = `Persiapkan karya terbaikmu untuk tantangan "${eventName}". Upload karya kamu langsung ke folder Google Drive pengumpulan.`;
       }
+      
+      if (modalConfirm) {
+        modalConfirm.setAttribute('href', targetUrl);
+      }
+
       if (modalOverlay) {
         modalOverlay.classList.add('active');
       }
