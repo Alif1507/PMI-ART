@@ -1,0 +1,104 @@
+{
+  "minggu_ini": {
+    "podium": [
+      {
+        "rank": 1,
+        "name": "Someone",
+        "pts": 12,
+        "avatar": ""
+      },
+      {
+        "rank": 2,
+        "name": "Someone",
+        "pts": 0,
+        "avatar": ""
+      },
+      {
+        "rank": 3,
+        "name": "Someone",
+        "pts": 0,
+        "avatar": ""
+      }
+    ],
+    "ranks": [
+      {
+        "rank": 4,
+        "name": "Someone",
+        "pts": 0
+      },
+      {
+        "rank": 5,
+        "name": "Someone",
+        "pts": 0
+      }
+    ]
+  },
+  "bulan_ini": {
+    "podium": [
+      {
+        "rank": 1,
+        "name": "Shadow Monarch",
+        "pts": 45,
+        "avatar": ""
+      },
+      {
+        "rank": 2,
+        "name": "Cha Hae-In",
+        "pts": 32,
+        "avatar": ""
+      },
+      {
+        "rank": 3,
+        "name": "Go Gun-Hee",
+        "pts": 24,
+        "avatar": ""
+      }
+    ],
+    "ranks": [
+      {
+        "rank": 4,
+        "name": "Thomas Andre",
+        "pts": 18
+      },
+      {
+        "rank": 5,
+        "name": "Liu Zhigang",
+        "pts": 15
+      }
+    ]
+  },
+  "semua": {
+    "podium": [
+      {
+        "rank": 1,
+        "name": "Shadow Monarch",
+        "pts": 120,
+        "avatar": ""
+      },
+      {
+        "rank": 2,
+        "name": "Sung Jin-Woo",
+        "pts": 95,
+        "avatar": ""
+      },
+      {
+        "rank": 3,
+        "name": "Cha Hae-In",
+        "pts": 78,
+        "avatar": ""
+      }
+    ],
+    "ranks": [
+      {
+        "rank": 4,
+        "name": "Beru",
+        "pts": 64
+      },
+      {
+        "rank": 5,
+        "name": "Igris",
+        "pts": 52
+      }
+    ]
+  }
+}

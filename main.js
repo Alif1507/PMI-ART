@@ -101,14 +101,74 @@ document.addEventListener('DOMContentLoaded', () => {
   document.body.classList.add('home-active');
   runSectionAnimations('home');
 
+  // Leaderboard JSON Renderer
+  let leaderboardData = null;
+
+  async function loadLeaderboardData() {
+    try {
+      const response = await fetch('leaderboard.json');
+      if (response.ok) {
+        leaderboardData = await response.json();
+        renderLeaderboard('minggu_ini');
+      }
+    } catch (e) {
+      console.warn('Could not load leaderboard.json:', e);
+    }
+  }
+
+  function renderLeaderboard(filterKey) {
+    if (!leaderboardData || !leaderboardData[filterKey]) return;
+
+    const data = leaderboardData[filterKey];
+
+    // Render Podium (JUARA 1, JUARA 2, JUARA 3)
+    if (data.podium) {
+      data.podium.forEach(item => {
+        const col = document.querySelector(`.juara-${item.rank}`);
+        if (!col) return;
+        
+        const nameEl = col.querySelector('.user-name');
+        const scoreEl = col.querySelector('.score-num');
+        const avatarEl = col.querySelector('.avatar-wrapper');
+
+        if (nameEl) nameEl.textContent = item.name;
+        if (scoreEl) scoreEl.textContent = item.pts;
+        if (avatarEl && item.avatar) {
+          avatarEl.innerHTML = `<img src="${item.avatar}" alt="${item.name}" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">`;
+        }
+      });
+    }
+
+    // Render Rank List (Rank 4+)
+    const listContainer = document.querySelector('.leaderboard-list');
+    if (listContainer && data.ranks) {
+      listContainer.innerHTML = data.ranks.map(row => `
+        <div class="leaderboard-row">
+          <div class="row-left">
+            <span class="rank-number">${row.rank}</span>
+            <span class="row-user-name">${row.name}</span>
+          </div>
+          <div class="row-right">
+            <span class="score-num">${row.pts}</span>
+            <span class="score-unit">Pts</span>
+          </div>
+        </div>
+      `).join('');
+    }
+  }
+
   // Filter tabs on Leaderboard view
   const filterTabs = document.querySelectorAll('.filter-tab');
   filterTabs.forEach(tab => {
     tab.addEventListener('click', () => {
       filterTabs.forEach(t => t.classList.remove('active'));
       tab.classList.add('active');
+      const filterKey = tab.getAttribute('data-filter');
+      renderLeaderboard(filterKey);
     });
   });
+
+  loadLeaderboardData();
 
   // 4. GSAP UI Entrance Animations
   function runSectionAnimations(sectionId) {
