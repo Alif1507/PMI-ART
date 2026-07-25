@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PMI ART - Komunitas desain kreatif tempat ide bertemu dan seniman berkembang bersama dalam event tantangan bertema Solo Leveling.">
+  <title>PMI ART - Creative Design Community</title>
+
+  <!-- Google Fonts CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Lenis Smooth Scroll CSS CDN -->
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.9/dist/lenis.css">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <header class="header">
+    <div class="header-container">
+      <nav class="nav-bar" id="main-nav">
+        <div class="nav-pills">
+          <button class="nav-pill active" data-target="home">Home</button>
+          <button class="nav-pill" data-target="events">Events</button>
+          <button class="nav-pill" data-target="leaderboard">Leaderboard</button>
+        </div>
+      </nav>
+
+      <!-- Leaderboard Filter Tabs (Shown on Leaderboard view) -->
+      <div class="leaderboard-filters" id="leaderboard-filters">
+        <button class="filter-tab active" data-filter="semua">Semua</button>
+        <button class="filter-tab" data-filter="bulan-ini">Bulan ini</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="main-content">
+
+    <!-- ==================== HOME PAGE SECTION ====================-->
+    <section id="home" class="page-section active">
+      <!-- Ghost watermark behind text (left side) -->
+      <img src="assets/Web PMI Design (Home) (5).png" alt="" class="hero-ghost" aria-hidden="true">
+
+      <!-- Main colored character (right side, absolutely positioned) -->
+      <img src="assets/Web PMI Design (Home) (4).png" alt="PMI ART Character with Blue Aura" class="hero-char">
+
+      <!-- Text content overlay -->
+      <div class="hero-text">
+        <h1 class="hero-title">Welcome to<br>PMI ART</h1>
+        <p class="hero-subtitle">A creative design community where<br>ideas meet and artists grow together.</p>
+        <button class="btn-primary hero-cta" id="btn-explore">
+          Explore Events
+          <svg class="btn-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- ==================== EVENTS PAGE SECTION ==================== -->
+    <section id="events" class="page-section">
+      <div class="events-container">
+        
+        <!-- Events Main Banner -->
+        <div class="events-banner">
+          <div class="banner-logo-wrapper">
+            <img src="assets/Clip path group.png" alt="PMI Art ARISE Logo" class="banner-logo">
+          </div>
+          <div class="banner-bg-wrapper">
+            <img src="assets/Group.png" alt="Sung Jin-Woo Banner" class="banner-bg-img">
+          </div>
+        </div>
+
+        <!-- Event Cards Grid -->
+        <div class="events-grid">
+
+          <!-- Event Card 1 -->
+          <article class="event-card">
+            <div class="card-bg-overlay" style="background-image: url('assets/Clip path group-2.png');"></div>
+            <div class="card-content">
+              <h2 class="card-title">Awal Yang Baik</h2>
+              <p class="card-quote">"Setiap Hunter hebat memulai langkahnya dari hal yang sederhana. Buktikan bahwa kamu mampu menyelesaikan tugas pertamamu."</p>
+              
+              <div class="card-info-block">
+                <div class="card-misi">
+                  <strong>Misi:</strong><br>
+                  Buat 1 desain foto profil bertema Solo Leveling
+                </div>
+
+                <div class="card-details">
+                  <p><strong>Detail:</strong></p>
+                  <p>Ukuran 1:1</p>
+                  <p>Deadline: 31 Agustus 2026</p>
+                  <p>Maksimal Nilai: 3 Arwah</p>
+                </div>
+              </div>
+
+              <button class="btn-bangkitkan" data-event="Awal Yang Baik">Bangkitkan</button>
+            </div>
+          </article>
+
+          <!-- Event Card 2 -->
+          <article class="event-card">
+            <div class="card-bg-overlay" style="background-image: url('assets/Mask group.png');"></div>
+            <div class="card-content">
+              <h2 class="card-title">Jejak Sang Hunter</h2>
+              <p class="card-quote">"Identitas seorang Hunter tidak hanya terlihat dari meningkatnya kekuatan, tetapi juga dari bagaimana ia memperkenalkan dirinya kepada dunia."</p>
+
+              <div class="card-info-block">
+                <div class="card-misi">
+                  <strong>Misi:</strong><br>
+                  Buat 1 banner media sosial
+                </div>
+
+                <div class="card-details">
+                  <p><strong>Detail:</strong></p>
+                  <p>Ukuran 1920 × 1080 px</p>
+                  <p>Tema: Anime Solo Leveling</p>
+                  <p>Deadline: 31 Agustus 2026</p>
+                  <p>Maksimal Nilai: 5 Arwah</p>
+                </div>
+              </div>
+
+              <button class="btn-bangkitkan" data-event="Jejak Sang Hunter">Bangkitkan</button>
+            </div>
+          </article>
+
+          <!-- Event Card 3 -->
+          <article class="event-card">
+            <div class="card-bg-overlay" style="background-image: url('assets/Clip path group-2.png');"></div>
+            <div class="card-content">
+              <h2 class="card-title">Warisan Sang<br>Shadow Monarch</h2>
+              <p class="card-quote">"Patung bukan sekadar ukiran batu. Ia menjadi simbol bagi mereka yang berhasil mencapai puncak kekuatan. Kini, giliranmu mengabadikan sosok Shadow Monarch melalui kreativitasmu."</p>
+
+              <div class="card-info-block">
+                <div class="card-misi">
+                  <strong>Misi:</strong><br>
+                  Buat 1 gambar patung Sung Jin-Woo
+                </div>
+
+                <div class="card-details">
+                  <p><strong>Detail:</strong></p>
+                  <p>Ukuran: 4:5</p>
+                  <p>Deadline: 31 Agustus 2026</p>
+                  <p>Maksimal Nilai: 7 Arwah</p>
+                </div>
+              </div>
+
+              <button class="btn-bangkitkan" data-event="Warisan Sang Shadow Monarch">Bangkitkan</button>
+            </div>
+          </article>
+
+          <!-- Event Card 4 -->
+          <article class="event-card">
+            <div class="card-bg-overlay" style="background-image: url('assets/Clip path group-3.png');"></div>
+            <div class="card-content">
+              <h2 class="card-title">Shadow Motion</h2>
+              <p class="card-quote">"Bayangan bukan hanya diam. Berikan kehidupan pada kekuatan Shadow Monarch."</p>
+
+              <div class="card-info-block">
+                <div class="card-misi">
+                  <strong>Misi:</strong><br>
+                  Buat edit video minimal 10 detik bertema Solo Leveling
+                </div>
+
+                <div class="card-details">
+                  <p><strong>Detail:</strong></p>
+                  <p>Rasio Bebas</p>
+                  <p>Gunakan minimal 3 transisi</p>
+                  <p>Deadline: 31 Agustus 2026</p>
+                  <p>Maksimal Nilai: 10 Arwah</p>
+                </div>
+              </div>
+
+              <button class="btn-bangkitkan" data-event="Shadow Motion">Bangkitkan</button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== LEADERBOARD PAGE SECTION ==================== -->
+    <section id="leaderboard" class="page-section">
+      <div class="leaderboard-container">
+        
+        <!-- Podium Grid (Juara 2, Juara 1, Juara 3) -->
+        <div class="podium-container">
+
+          <!-- Juara 2 (Left) -->
+          <div class="podium-column juara-2-col">
+            <h3 class="podium-title">JUARA 2</h3>
+            <div class="podium-card juara-2">
+              <div class="avatar-wrapper">
+                <div class="avatar-placeholder">
+                  <svg width="40" height="40" viewBox="0 0 100 100" fill="none">
+                    <rect width="100" height="100" rx="50" fill="#B3E5FC"/>
+                    <circle cx="50" cy="35" r="20" fill="#E1F5FE"/>
+                    <path d="M20 85 C20 60, 80 60, 80 85 Z" fill="#81D4FA"/>
+                  </svg>
+                </div>
+              </div>
+              <span class="user-name">Someone</span>
+              <div class="score-display">
+                <span class="score-num">0</span>
+                <span class="score-unit">Pts</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Juara 1 (Center) -->
+          <div class="podium-column juara-1-col">
+            <h3 class="podium-title">JUARA 1</h3>
+            <div class="podium-card juara-1">
+              <div class="avatar-wrapper">
+                <div class="avatar-placeholder">
+                  <svg width="48" height="48" viewBox="0 0 100 100" fill="none">
+                    <rect width="100" height="100" rx="50" fill="#B3E5FC"/>
+                    <circle cx="50" cy="35" r="20" fill="#E1F5FE"/>
+                    <path d="M20 85 C20 60, 80 60, 80 85 Z" fill="#81D4FA"/>
+                  </svg>
+                </div>
+              </div>
+              <span class="user-name">Someone</span>
+              <div class="badge-arise">
+                <img src="assets/Web PMI Design (Home) (2) 1.png" alt="Arise Badge">
+              </div>
+              <div class="score-display">
+                <span class="score-num">12</span>
+                <span class="score-unit">Pts</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Juara 3 (Right) -->
+          <div class="podium-column juara-3-col">
+            <h3 class="podium-title">JUARA 3</h3>
+            <div class="podium-card juara-3">
+              <div class="avatar-wrapper">
+                <div class="avatar-placeholder">
+                  <svg width="36" height="36" viewBox="0 0 100 100" fill="none">
+                    <rect width="100" height="100" rx="50" fill="#B3E5FC"/>
+                    <circle cx="50" cy="35" r="20" fill="#E1F5FE"/>
+                    <path d="M20 85 C20 60, 80 60, 80 85 Z" fill="#81D4FA"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="juara-3-meta">
+                <span class="user-name">Someone</span>
+                <div class="score-display">
+                  <span class="score-num">0</span>
+                  <span class="score-unit">Pts</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Rank List (Rank 4+) -->
+        <div class="leaderboard-list">
+          
+          <!-- Rank 4 -->
+          <div class="leaderboard-row">
+            <div class="row-left">
+              <span class="rank-number">4</span>
+              <span class="row-user-name">Someone</span>
+            </div>
+            <div class="row-right">
+              <span class="score-num">0</span>
+              <span class="score-unit">Pts</span>
+            </div>
+          </div>
+
+          <!-- Rank 5 -->
+          <div class="leaderboard-row">
+            <div class="row-left">
+              <span class="rank-number">5</span>
+              <span class="row-user-name">Someone</span>
+            </div>
+            <div class="row-right">
+              <span class="score-num">0</span>
+              <span class="score-unit">Pts</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Interactive Action Modal for "Bangkitkan" -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal-card">
+      <button class="modal-close" id="modal-close">&times;</button>
+      <div class="modal-body">
+        <div class="modal-icon">⚔️</div>
+        <h3 class="modal-title" id="modal-title">Tantangan Dibangkitkan!</h3>
+        <p class="modal-desc" id="modal-desc">Siapkan karya terbaikmu dan kirimkan sesuai kriteria misi ini.</p>
+        <button class="btn-primary modal-action-btn" id="modal-confirm">Siap Berjuang</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lenis Smooth Scroll JS CDN -->
+  <script src="https://unpkg.com/lenis@1.1.9/dist/lenis.min.js"></script>
+
+  <!-- GSAP Core & Plugins CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- Main JavaScript File -->
+  <script src="main.js"></script>
+</body>
+</html>
